@@ -11,7 +11,7 @@ header{height:78px;padding:0 7vw;border-bottom:1px solid var(--line);display:fle
 .brand{font-size:16px;letter-spacing:.13em}.brand b{font-weight:700}
 nav{display:flex;gap:34px;align-items:center;font-size:12px;letter-spacing:.04em}nav a{transition:opacity .2s}nav a:hover{opacity:.5}
 nav a:last-child{border-bottom:1px solid var(--ink);padding-bottom:3px}
-section{padding:125px 10vw;border-bottom:0}
+section{padding:125px 10vw;border-bottom:1px solid var(--line)}
 .eyebrow,.section-label{font-size:9px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase}
 .hero{min-height:calc(100vh - 78px);display:flex;align-items:center;position:relative;overflow:hidden;background:var(--bg)}
 .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,var(--bg) 0%,rgba(243,240,232,.88) 24%,rgba(243,240,232,.48) 50%,rgba(243,240,232,.08) 78%,rgba(243,240,232,0) 100%),url("pudorys_title.png");background-repeat:no-repeat;background-size:cover,cover;background-position:center,center right;opacity:var(--hero-plan-opacity,.34);pointer-events:none;transition:opacity .18s ease}
@@ -80,15 +80,15 @@ footer{display:flex;justify-content:space-between;padding:22px 7vw;background:va
 /* Jemné přechody mezi barevnými sekcemi */
 section{position:relative}
 .intro,.services,.process,.samples,.note-section,.contact{background-clip:padding-box}
-.intro{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,rgba(243,240,232,1) 90px)}
-.services{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,rgba(243,240,232,1) 90px)}
-.process{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,rgba(243,240,232,1) 90px)}
-.samples{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,var(--paper) 110px)}
-.note-section{background:linear-gradient(to bottom,var(--paper) 0,#eae6dc 140px)}
-.contact{background:linear-gradient(to bottom,#eae6dc 0,var(--dark) 180px)}
+
+
+
+
+
+
 @media(max-width:800px){
- .intro,.services,.process{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,rgba(243,240,232,1) 60px)}
- .samples{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,var(--paper) 75px)}
- .note-section{background:linear-gradient(to bottom,var(--paper) 0,#eae6dc 85px)}
- .contact{background:linear-gradient(to bottom,#eae6dc 0,var(--dark) 110px)}
+ .intro,.services,
+ 
+ 
+ 
 }
