@@ -33,14 +33,14 @@ em{font-style:italic;font-weight:500;color:#81796d}
 .hero-services>div{display:flex;gap:13px;padding-right:25px}
 .hero-services>div+div{border-left:1px solid var(--line);padding-left:25px}
 .feature-icon{font-size:27px;color:var(--accent);line-height:1}
-.hero-services b,.benefits b{display:block;font-size:13px;margin-bottom:3px}.hero-services small,.benefits small{display:block;color:var(--muted);font-size:11px;line-height:1.5}
+.hero-services b,.benefits b{display:block;font-size:13px;margin-bottom:3px}.hero-services small,.benefits small{display:block;color:var(--muted);font-size:11px;line-height:1.5}.feature-svg{display:flex;align-items:center}.feature-svg svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
 .scroll-cue{position:absolute;right:7vw;bottom:38px;font-size:8px;letter-spacing:.32em;color:var(--muted);display:grid;gap:7px;text-align:center;cursor:pointer;transition:color .2s;text-decoration:none}.scroll-cue span{font-size:28px;line-height:1;color:var(--ink);transition:transform .2s}.scroll-cue:hover{color:var(--ink)}.scroll-cue:hover span{transform:translateY(3px)}
 .modern-section{padding:120px 6vw;border-top:1px solid var(--line)}
 .intro-grid{margin-top:45px;display:grid;grid-template-columns:1.35fr .65fr;gap:9vw;align-items:end}
 .intro h2,.services h2,.process h2,.samples h2,.note-section h2,.contact h2{font:700 clamp(44px,5.2vw,74px)/1.02 "Space Grotesk",Arial,sans-serif;letter-spacing:-.055em;margin:0 0 25px}
 .intro p,.services-head p,.samples-head p,.note-inner p{max-width:660px;color:var(--muted);font-size:16px;line-height:1.75}
 .text-link{display:inline-block;margin-top:13px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#947861;border-bottom:1px solid var(--accent);padding-bottom:6px}.text-link span{margin-left:18px}
-.benefits{border-left:1px solid var(--line);padding-left:42px;display:grid;gap:28px}.benefits>div{display:grid;grid-template-columns:40px 1fr;align-items:start}.benefits span{font-size:29px;color:var(--accent);grid-row:span 2}
+.benefits{border-left:1px solid var(--line);padding-left:42px;display:grid;gap:28px}.benefits>div{display:grid;grid-template-columns:40px 1fr;align-items:start}.benefits span{color:var(--accent);grid-row:span 2}.benefit-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:flex-start}.benefit-icon svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round}
 .services{background:var(--paper)}.services-head{display:grid;grid-template-columns:1.2fr .8fr;gap:8vw;margin-top:45px;align-items:end}
 .services-head p{margin:0 0 8px}.service-list{display:grid;grid-template-columns:repeat(3,1fr);margin-top:70px;border-top:1px solid var(--line)}
 .service-list article{padding:28px 34px 10px 0;min-height:205px}.service-list article+article{border-left:1px solid var(--line);padding-left:34px}.service-list article>span{font-size:10px;color:var(--accent);letter-spacing:.15em}.service-list h3{font:700 27px "Space Grotesk",Arial,sans-serif;margin:34px 0 10px}.service-list p{color:var(--muted);font-size:14px;max-width:360px}
