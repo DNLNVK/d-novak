@@ -19,7 +19,7 @@ nav a:hover,nav a.active{border-color:var(--accent)}
 .hero{min-height:calc(100vh - 86px);position:relative;overflow:hidden;background:var(--paper)}
 .hero-blueprint{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(251,250,247,.98) 0%,rgba(251,250,247,.88) 29%,rgba(251,250,247,.42) 55%,rgba(251,250,247,.05) 78%),url("pudorys_title.png");background-repeat:no-repeat;background-size:cover,auto 125%;background-position:center,right center;opacity:.34;transition:opacity .2s}
 .hero-inner{position:relative;z-index:1;min-height:calc(100vh - 86px);padding:110px 6vw 65px;display:flex;align-items:center}
-.hero-copy{max-width:760px}
+.hero-copy{max-width:900px}
 .eyebrow,.section-kicker{font-size:10px;letter-spacing:.3em;color:#947861;text-transform:uppercase}
 .eyebrow{display:flex;align-items:center;gap:17px}.eyebrow span,.section-kicker i{display:inline-block;width:43px;height:1px;background:var(--accent)}
 .hero h1{font:700 clamp(58px,7vw,100px)/.91 "Space Grotesk",Arial,sans-serif;letter-spacing:-.065em;margin:27px 0 29px}
@@ -29,11 +29,11 @@ em{font-style:italic;font-weight:500;color:#81796d}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:25px;padding:15px 25px;border:1px solid var(--ink);font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:.2s}
 .btn.primary{background:#b79d87;color:white;border-color:#b79d87}.btn:hover{transform:translateY(-1px);background:var(--ink);color:white;border-color:var(--ink)}
 .btn.secondary{background:rgba(255,255,255,.3)}
-.hero-services{display:grid;grid-template-columns:repeat(3,1fr);max-width:760px;border-top:1px solid var(--line);padding-top:20px}
-.hero-services>div{display:flex;gap:13px;padding-right:25px}
-.hero-services>div+div{border-left:1px solid var(--line);padding-left:25px}
+.hero-services{display:grid;grid-template-columns:repeat(3,1fr);max-width:900px;border-top:1px solid var(--line);padding-top:20px}
+.hero-services>div{display:flex;gap:11px;padding-right:15px;min-width:0}
+.hero-services>div+div{border-left:1px solid var(--line);padding-left:15px}
 .feature-icon{font-size:27px;color:var(--accent);line-height:1}
-.hero-services b,.benefits b{display:block;font-size:13px;margin-bottom:3px}.hero-services small,.benefits small{display:block;color:var(--muted);font-size:11px;line-height:1.5}.feature-svg{display:flex;align-items:center}.feature-svg img{width:20px;height:20px;display:block}
+.hero-services b,.benefits b{display:block;font-size:13px;margin-bottom:3px}.hero-services small,.benefits small{display:block;color:var(--muted);font-size:11px;line-height:1.5}.feature-svg{display:flex;align-items:center;flex:none}.feature-svg img{width:20px;height:20px;display:block}
 .scroll-cue{position:absolute;right:7vw;bottom:38px;font-size:8px;letter-spacing:.32em;color:var(--muted);display:grid;gap:7px;text-align:center;cursor:pointer;transition:color .2s;text-decoration:none}.scroll-cue span{font-size:28px;line-height:1;color:var(--ink);transition:transform .2s}.scroll-cue:hover{color:var(--ink)}.scroll-cue:hover span{transform:translateY(3px)}
 .modern-section{padding:120px 6vw;border-top:1px solid var(--line)}
 .intro-grid{margin-top:45px;display:grid;grid-template-columns:1.35fr .65fr;gap:9vw;align-items:end}
