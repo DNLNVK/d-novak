@@ -4,6 +4,31 @@ function hide(fromBack=false){modal.classList.remove('open');modal.setAttribute(
 open.addEventListener('click',show);close.addEventListener('click',()=>hide());modal.addEventListener('click',e=>{if(e.target===modal)hide()});window.addEventListener('popstate',()=>{if(formHistory){formHistory=false;hide(true)}});document.addEventListener('keydown',e=>{if(e.key==='Escape')hide()});document.querySelector('form').addEventListener('submit',e=>{e.preventDefault();alert('Formulář je zatím v testovacím režimu. Odesílání napojíme před spuštěním webu.');});
 
 
+// Aktivní položka navigace podle právě zobrazeného oddílu.
+const navLinks=[...document.querySelectorAll('nav a')];
+const navSections=[
+  {id:'top',links:['#top','#intro']},
+  {id:'sluzby',links:['#sluzby']},
+  {id:'proces',links:['#proces']},
+  {id:'ukazky',links:['#ukazky']},
+  {id:'kontakt',links:['#kontakt']}
+];
+function updateActiveNav(){
+  const y=window.scrollY+window.innerHeight*0.35;
+  let current='top';
+  navSections.forEach(item=>{
+    const el=document.getElementById(item.id);
+    if(el && el.getBoundingClientRect().top+window.scrollY<=y) current=item.id;
+  });
+  navLinks.forEach(link=>{
+    link.classList.toggle('active',navSections.find(item=>item.id===current)?.links.includes(link.getAttribute('href'))||false);
+  });
+}
+window.addEventListener('scroll',updateActiveNav,{passive:true});
+window.addEventListener('resize',updateActiveNav);
+updateActiveNav();
+
+
 const blueprint=document.querySelector('.hero-blueprint');
 function updateBlueprint(){
   if(!blueprint)return;
