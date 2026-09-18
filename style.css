@@ -72,4 +72,10 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:25p
 .lightbox-close{right:25px;top:18px;font-size:38px;font-weight:300}
 .lightbox-arrow{top:50%;transform:translateY(-50%);font-size:34px;padding:25px 18px;opacity:.8;transition:opacity .2s}
 .lightbox-arrow:hover{opacity:1}.lightbox-prev{left:20px}.lightbox-next{right:20px}
+@media(min-width:701px) and (max-width:800px){
+.hero-services{grid-template-columns:repeat(3,1fr)}
+.hero-services>div{padding:0 15px 0 0}
+.hero-services>div+div{border-left:1px solid var(--line);border-top:0;padding-left:15px}
+}
+
 @media(max-width:600px){.sample-grid{grid-template-columns:1fr !important;gap:14px;margin-top:40px}.sample-card img{height:290px}.lightbox{padding:20px 50px}.lightbox-stage{width:100%;height:calc(100vh - 40px)}.lightbox-arrow{font-size:28px;padding:15px 8px}.lightbox-prev{left:5px}.lightbox-next{right:5px}}
