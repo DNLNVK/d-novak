@@ -33,7 +33,7 @@ em{font-style:italic;font-weight:500;color:#81796d}
 .hero-services>div{display:flex;gap:11px;padding-right:15px;min-width:0}
 .hero-services>div+div{border-left:1px solid var(--line);padding-left:15px}
 .feature-icon{font-size:27px;color:var(--accent);line-height:1}
-.hero-services b,.benefits b{display:block;font-size:13px;margin-bottom:3px}.hero-services small,.benefits small{display:block;color:var(--muted);font-size:11px;line-height:1.5}.feature-svg{display:flex;align-items:center;flex:none}.feature-svg img{width:20px;height:20px;display:block}
+.hero-services b,.benefits b{display:block;font-size:13px;margin-bottom:3px}.hero-services small,.benefits small{display:block;color:var(--muted);font-size:11px;line-height:1.5}.feature-svg{display:flex;align-items:center;flex:none}.feature-svg img{width:24px;height:24px;display:block}
 .scroll-cue{position:absolute;right:7vw;bottom:38px;font-size:8px;letter-spacing:.32em;color:var(--muted);display:grid;gap:7px;text-align:center;cursor:pointer;transition:color .2s;text-decoration:none}.section-scroll-cue{z-index:2}.scroll-cue span{font-size:28px;line-height:1;color:var(--ink);transition:transform .2s}.scroll-cue:hover{color:var(--ink)}.scroll-cue:hover span{transform:translateY(3px)}
 .modern-section{padding:120px 6vw;border-top:1px solid var(--line)}
 .intro-grid{margin-top:45px;display:grid;grid-template-columns:1.35fr .65fr;gap:9vw;align-items:end}
