@@ -80,15 +80,15 @@ footer{display:flex;justify-content:space-between;padding:22px 7vw;background:va
 /* Jemné přechody mezi barevnými sekcemi */
 section{position:relative}
 .intro,.services,.process,.samples,.note-section,.contact{background-clip:padding-box}
-.intro{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,rgba(243,240,232,1) 28px)}
-.services{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,rgba(243,240,232,1) 28px)}
-.process{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,rgba(243,240,232,1) 28px)}
-.samples{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,var(--paper) 32px)}
-.note-section{background:linear-gradient(to bottom,var(--paper) 0,#eae6dc 55px)}
-.contact{background:linear-gradient(to bottom,#eae6dc 0,var(--dark) 60px)}
+.intro{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,rgba(243,240,232,1) 90px)}
+.services{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,rgba(243,240,232,1) 90px)}
+.process{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,rgba(243,240,232,1) 90px)}
+.samples{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,var(--paper) 110px)}
+.note-section{background:linear-gradient(to bottom,var(--paper) 0,#eae6dc 140px)}
+.contact{background:linear-gradient(to bottom,#eae6dc 0,var(--dark) 180px)}
 @media(max-width:800px){
- .intro,.services,.process{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,rgba(243,240,232,1) 22px)}
- .samples{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,var(--paper) 26px)}
- .note-section{background:linear-gradient(to bottom,var(--paper) 0,#eae6dc 40px)}
- .contact{background:linear-gradient(to bottom,#eae6dc 0,var(--dark) 45px)}
+ .intro,.services,.process{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,rgba(243,240,232,1) 60px)}
+ .samples{background:linear-gradient(to bottom,rgba(243,240,232,0) 0,var(--paper) 75px)}
+ .note-section{background:linear-gradient(to bottom,var(--paper) 0,#eae6dc 85px)}
+ .contact{background:linear-gradient(to bottom,#eae6dc 0,var(--dark) 110px)}
 }
