@@ -10,3 +10,17 @@ function updateHeroPlan(){
 window.addEventListener('scroll',updateHeroPlan,{passive:true});
 window.addEventListener('resize',updateHeroPlan);
 updateHeroPlan();
+
+function syncSampleGallery(){
+  const grid=document.querySelector('.sample-grid');
+  const main=document.querySelector('.sample-main');
+  const side=document.querySelector('.sample-side');
+  if(!grid||!main||!side) return;
+  if(window.innerWidth<=800){
+    side.style.height='';
+    return;
+  }
+  side.style.height=main.getBoundingClientRect().height+'px';
+}
+window.addEventListener('load',syncSampleGallery);
+window.addEventListener('resize',syncSampleGallery);
