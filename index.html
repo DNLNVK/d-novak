@@ -1,33 +1,140 @@
 <!doctype html>
 <html lang="cs">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="D—NOVÁK — technická dokumentace skutečného stavu staveb.">
-<title>D—NOVÁK — Technická dokumentace</title>
-<link rel="stylesheet" href="style.css"><link rel="icon" href="favicon.svg">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="D—NOVÁK — zaměření a technická dokumentace skutečného stavu staveb.">
+<title>D—NOVÁK — Zaměření a technická dokumentace</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg">
 </head>
 <body>
-<header><a class="brand" href="#top">D—<b>NOVÁK</b></a><nav><a href="#sluzby">Služby</a><a href="#proces">Jak to probíhá</a><a class="nav-cta" href="#kontakt">Kontaktovat</a></nav></header>
+<header>
+  <a class="brand" href="#top" aria-label="D—NOVÁK">D—<b>NOVÁK</b></a>
+  <nav>
+    <a href="#sluzby">Služby</a>
+    <a href="#proces">Postup</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
 <main id="top">
 <section class="hero">
-<div class="hero-copy"><small>TECHNICKÁ DOKUMENTACE</small><h1>Máte stavbu bez<br><i>výkresů?</i></h1><p>Zaměření a přehledná dokumentace skutečného stavu domů, chalup a dalších objektů.</p><a class="btn" href="#kontakt">Kontaktovat <span>↗</span></a></div>
-<div class="drawing" aria-hidden="true"><div class="plan"><div class="wall a"></div><div class="wall b"></div><div class="wall c"></div><div class="door"></div><div class="dim top"></div><div class="dim side"></div><span class="label l1">4 820</span><span class="label l2">3 650</span><span class="label l3">OBÝVACÍ POKOJ</span></div><small>PŮDORYS · SKUTEČNÝ STAV</small></div>
+  <div class="hero-copy">
+    <div class="eyebrow">ZAMĚŘENÍ · DOKUMENTACE · PODKLADY</div>
+    <h1>Když stavba<br>nemá <em>výkresy.</em></h1>
+    <p class="lead">Zaměření skutečného stavu a přehledná výkresová dokumentace domů, chalup, garáží a dalších objektů.</p>
+    <a class="btn" href="#kontakt">Nezávazně popsat zakázku <span>↗</span></a>
+  </div>
+
+  <div class="drawing" aria-hidden="true">
+    <div class="drawing-top"><span>PŮDORYS</span><span>SKUTEČNÝ STAV</span></div>
+    <div class="plan">
+      <div class="outer"></div>
+      <div class="room r1"><span>01</span></div>
+      <div class="room r2"><span>02</span></div>
+      <div class="room r3"><span>03</span></div>
+      <div class="door d1"></div><div class="door d2"></div>
+      <div class="dim top"><span>9 240</span></div>
+      <div class="dim side"><span>6 180</span></div>
+      <div class="cross x1"></div><div class="cross x2"></div>
+    </div>
+    <div class="drawing-bottom"><span>01—03 MÍSTNOSTI</span><span>M 1:100</span></div>
+  </div>
 </section>
-<section class="problem split"><small>PROBLÉM</small><div><h2>Dokumentace chybí.<br>Stavba ale <i>stojí.</i></h2><p>U starších domů, chalup a hospodářských objektů často původní výkresy nejsou k dispozici nebo neodpovídají skutečnosti. Stačí popsat, co potřebujete vyřešit — další postup spolu domluvíme.</p></div></section>
-<section id="sluzby"><div class="section-head"><small>SLUŽBY</small><h2>Co mohu zajistit</h2></div><div class="cards">
-<article><small>01</small><h3>Zaměření stavby</h3><p>Zaměření skutečných rozměrů objektu přímo na místě.</p></article>
-<article><small>02</small><h3>Dokumentace skutečného stavu</h3><p>Přehledné podklady podle skutečného provedení stavby.</p></article>
-<article><small>03</small><h3>Výkresová dokumentace</h3><p>Půdorysy, řezy, pohledy a další potřebné výkresy.</p></article>
-</div></section>
-<section id="proces" class="split"><small>JAK TO PROBÍHÁ</small><div class="steps">
-<div><b>01</b><span><h3>Napíšete mi</h3><p>Stačí stručně popsat stavbu a co potřebujete vyřešit. Můžete přiložit fotografie.</p></span></div>
-<div><b>02</b><span><h3>Domluvíme se</h3><p>Podle informací odhadnu rozsah práce. Pokud to půjde, řeknu orientační cenu už při prvním kontaktu.</p></span></div>
-<div><b>03</b><span><h3>Zaměříme stavbu</h3><p>Pokud je potřeba osobní návštěva, domluvíme termín přímo u objektu.</p></span></div>
-<div><b>04</b><span><h3>Zpracování a předání</h3><p>Naměřená data převedu do dohodnuté dokumentace a předám vám výsledek.</p></span></div>
-</div></section>
-<section id="kontakt" class="contact"><div class="contact-box"><small>KONTAKT</small><h2>Popište mi,<br><i>co potřebujete.</i></h2><p>Nemusíte přesně vědět, jakou dokumentaci potřebujete. Napište mi, o jaký objekt jde a co řešíte. Podle toho se domluvíme na dalším postupu.</p><button class="btn" type="button" id="openForm">Kontaktovat <span>↗</span></button></div></section>
+
+<section class="intro split">
+  <div class="section-label">KDY SE TO HODÍ</div>
+  <div>
+    <h2>Dokumentace chybí.<br><em>Stavba ale stojí.</em></h2>
+    <p>U starších domů, chalup a hospodářských nebo jiných objektů často původní výkresy nejsou k dispozici, případně neodpovídají současnému stavu.</p>
+    <p>Nemusíte předem vědět, co přesně potřebujete. Popište mi situaci, pošlete pár fotografií a společně zjistíme, jaké podklady budou dávat smysl.</p>
+  </div>
+</section>
+
+<section id="sluzby" class="services">
+  <div class="section-head">
+    <div class="section-label">SLUŽBY</div>
+    <h2>Od zaměření<br>po hotové podklady.</h2>
+  </div>
+  <div class="service-list">
+    <article>
+      <span class="num">01</span>
+      <div><h3>Zaměření stavby</h3><p>Skutečné rozměry objektu, místností a konstrukcí zaměřené přímo na místě.</p></div>
+    </article>
+    <article>
+      <span class="num">02</span>
+      <div><h3>Dokumentace skutečného stavu</h3><p>Přehledné podklady zachycující stavbu tak, jak skutečně stojí.</p></div>
+    </article>
+    <article>
+      <span class="num">03</span>
+      <div><h3>Výkresová dokumentace</h3><p>Půdorysy, řezy, pohledy a další výkresy podle rozsahu konkrétní zakázky.</p></div>
+    </article>
+  </div>
+</section>
+
+<section id="proces" class="process split">
+  <div class="section-label">JAK TO PROBÍHÁ</div>
+  <div class="steps">
+    <div class="step"><b>01</b><div><h3>Napíšete mi</h3><p>Stručně popíšete objekt a to, co potřebujete vyřešit. Klidně přiložíte fotografie.</p></div></div>
+    <div class="step"><b>02</b><div><h3>Probereme zadání</h3><p>Podle dostupných informací se domluvíme, co bude potřeba zaměřit a zpracovat.</p></div></div>
+    <div class="step"><b>03</b><div><h3>Zaměření na místě</h3><p>Pokud je osobní návštěva potřeba, domluvíme termín přímo u objektu.</p></div></div>
+    <div class="step"><b>04</b><div><h3>Zpracování a předání</h3><p>Naměřená data převedu do dohodnutých výkresů a podkladů.</p></div></div>
+  </div>
+</section>
+
+<section class="note-section">
+  <div class="note-mark">D—</div>
+  <div>
+    <div class="section-label">JEDNODUŠE</div>
+    <h2>Nemusíte rozumět výkresům.<br><em>Stačí říct, co řešíte.</em></h2>
+    <p>Každou zakázku nejdřív projdeme podle konkrétní situace. Teprve potom se domlouváme na rozsahu práce a ceně.</p>
+  </div>
+</section>
+
+<section id="kontakt" class="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="section-label">KONTAKT</div>
+      <h2>Popište mi,<br><em>co potřebujete.</em></h2>
+    </div>
+    <div class="contact-copy">
+      <p>Nemusíte přesně vědět, jakou dokumentaci potřebujete. Napište, o jaký objekt jde a co řešíte. Fotografie můžete přiložit rovnou k poptávce.</p>
+      <button class="btn dark" type="button" id="openForm">Napsat poptávku <span>↗</span></button>
+      <p class="micro">Nezávazně · fotografie jsou vítané</p>
+    </div>
+  </div>
+</section>
 </main>
-<footer><span>© 2026 D—NOVÁK</span><span>Technická dokumentace</span></footer>
-<div class="modal" id="formModal" aria-hidden="true"><div class="modal-inner"><button class="close" id="closeForm" aria-label="Zavřít">×</button><small>POPTÁVKA</small><h2>Co potřebujete vyřešit?</h2><form><label>Zpráva*<textarea required placeholder="Např. potřebuji zaměřit starší rodinný dům..."></textarea></label><div class="form-grid"><label>E-mail*<input type="email" required placeholder="vas@email.cz"></label><label>Telefon<input type="tel" placeholder="+420 ..."></label></div><label>Fotografie nebo podklady<input type="file" multiple accept="image/*,.pdf"></label><p class="note">Fotografie jsou dobrovolné. Pokud je přiložíte, mohu lépe odhadnout rozsah práce.</p><label class="check"><input type="checkbox" required> Souhlasím se zpracováním údajů za účelem vyřízení poptávky.</label><button class="btn" type="submit">Odeslat poptávku <span>↗</span></button></form></div></div>
+
+<footer>
+  <span>© 2026 D—NOVÁK</span>
+  <span>Zaměření a technická dokumentace</span>
+</footer>
+
+<div class="modal" id="formModal" aria-hidden="true">
+  <div class="modal-inner">
+    <button class="close" id="closeForm" aria-label="Zavřít">×</button>
+    <div class="section-label">POPTÁVKA</div>
+    <h2>Co potřebujete vyřešit?</h2>
+    <p class="modal-intro">Stačí popsat situaci vlastními slovy. Pokud máte fotografie nebo staré podklady, můžete je přiložit.</p>
+    <form>
+      <label>Co potřebujete?*
+        <textarea required placeholder="Např. potřebuji zaměřit starší rodinný dům a připravit půdorysy…"></textarea>
+      </label>
+      <div class="form-grid">
+        <label>E-mail*<input type="email" required placeholder="vas@email.cz"></label>
+        <label>Telefon<input type="tel" placeholder="+420 …"></label>
+      </div>
+      <label>Fotografie nebo podklady
+        <input type="file" multiple accept="image/*,.pdf">
+      </label>
+      <p class="note">Přílohy jsou dobrovolné. Pomohou mi lépe pochopit rozsah zakázky.</p>
+      <label class="check"><input type="checkbox" required><span>Souhlasím se zpracováním údajů za účelem vyřízení poptávky.</span></label>
+      <button class="btn" type="submit">Odeslat poptávku <span>↗</span></button>
+    </form>
+  </div>
+</div>
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>
