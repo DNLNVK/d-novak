@@ -11,3 +11,51 @@ function updateBlueprint(){
 window.addEventListener('scroll',updateBlueprint,{passive:true});
 window.addEventListener('resize',updateBlueprint);
 updateBlueprint();
+
+
+const drawings=[
+  {src:'Pudorys1NP.jpg',title:'Půdorys'},
+  {src:'Rez.jpg',title:'Řez objektem'},
+  {src:'Pohledy.jpg',title:'Pohledy'}
+];
+const lightbox=document.getElementById('drawingLightbox');
+const lightboxImage=document.getElementById('lightboxImage');
+const lightboxTitle=document.getElementById('lightboxTitle');
+const lightboxCount=document.getElementById('lightboxCount');
+let drawingIndex=0;
+function renderDrawing(){
+  const d=drawings[drawingIndex];
+  lightboxImage.src=d.src;
+  lightboxImage.alt='Ukázka '+d.title.toLowerCase()+' skutečného stavu';
+  lightboxTitle.textContent=d.title;
+  lightboxCount.textContent=String(drawingIndex+1).padStart(2,'0')+' / '+String(drawings.length).padStart(2,'0');
+}
+function openDrawing(index){
+  drawingIndex=index;
+  renderDrawing();
+  lightbox.classList.add('open');
+  lightbox.setAttribute('aria-hidden','false');
+  document.body.classList.add('lock');
+}
+function closeDrawing(){
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden','true');
+  document.body.classList.remove('lock');
+}
+document.querySelectorAll('.sample-card').forEach(card=>{
+  card.addEventListener('click',()=>openDrawing(Number(card.dataset.index)));
+});
+document.querySelector('.lightbox-close').addEventListener('click',closeDrawing);
+document.querySelector('.lightbox-prev').addEventListener('click',()=>{
+  drawingIndex=(drawingIndex-1+drawings.length)%drawings.length; renderDrawing();
+});
+document.querySelector('.lightbox-next').addEventListener('click',()=>{
+  drawingIndex=(drawingIndex+1)%drawings.length; renderDrawing();
+});
+lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeDrawing()});
+document.addEventListener('keydown',e=>{
+  if(!lightbox.classList.contains('open'))return;
+  if(e.key==='Escape')closeDrawing();
+  if(e.key==='ArrowLeft')document.querySelector('.lightbox-prev').click();
+  if(e.key==='ArrowRight')document.querySelector('.lightbox-next').click();
+});
