@@ -102,9 +102,9 @@
     <p>Ukázky výkresů z reálného zpracování skutečného stavu.</p>
   </div>
   <div class="sample-grid">
-    <figure class="sample"><img src="Pudorys1NP.jpg" alt="Ukázka půdorysu skutečného stavu"><figcaption>PŮDORYS <span>01</span></figcaption></figure>
-    <figure class="sample"><img src="Rez.jpg" alt="Ukázka řezu skutečného stavu"><figcaption>ŘEZ OBJEKTEM <span>02</span></figcaption></figure>
-    <figure class="sample"><img src="Pohledy.jpg" alt="Ukázka pohledů skutečného stavu"><figcaption>POHLEDY <span>03</span></figcaption></figure>
+    <button class="sample-card" type="button" data-index="0"><span class="sample-number">01</span><img src="Pudorys1NP.jpg" alt="Ukázka půdorysu skutečného stavu"><span class="sample-label">PŮDORYS <b>+</b></span></button>
+    <button class="sample-card" type="button" data-index="1"><span class="sample-number">02</span><img src="Rez.jpg" alt="Ukázka řezu skutečného stavu"><span class="sample-label">ŘEZ OBJEKTEM <b>+</b></span></button>
+    <button class="sample-card" type="button" data-index="2"><span class="sample-number">03</span><img src="Pohledy.jpg" alt="Ukázka pohledů skutečného stavu"><span class="sample-label">POHLEDY <b>+</b></span></button>
   </div>
 </section>
 
@@ -155,6 +155,15 @@
       <button class="btn primary" type="submit">Odeslat poptávku <span>→</span></button>
     </form>
   </div>
+</div>
+<div class="lightbox" id="drawingLightbox" aria-hidden="true">
+  <button class="lightbox-close" type="button" aria-label="Zavřít">×</button>
+  <button class="lightbox-arrow lightbox-prev" type="button" aria-label="Předchozí výkres">←</button>
+  <div class="lightbox-stage">
+    <img id="lightboxImage" src="" alt="">
+    <div class="lightbox-meta"><span id="lightboxTitle"></span><small id="lightboxCount"></small></div>
+  </div>
+  <button class="lightbox-arrow lightbox-next" type="button" aria-label="Další výkres">→</button>
 </div>
 <script src="script.js"></script>
 </body>
