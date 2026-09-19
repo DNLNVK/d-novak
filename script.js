@@ -1,7 +1,30 @@
 const modal=document.getElementById('formModal'),open=document.getElementById('openForm'),close=document.getElementById('closeForm');let formHistory=false;
 function show(){modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('lock');if(!formHistory){history.pushState({formModal:true},'','#poptavka');formHistory=true}}
 function hide(fromBack=false){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('lock');if(formHistory&&!fromBack){formHistory=false;history.back()}}
-open.addEventListener('click',show);close.addEventListener('click',()=>hide());modal.addEventListener('click',e=>{if(e.target===modal)hide()});window.addEventListener('popstate',()=>{if(formHistory){formHistory=false;hide(true)}});document.addEventListener('keydown',e=>{if(e.key==='Escape')hide()});document.querySelector('form').addEventListener('submit',e=>{e.preventDefault();alert('Formulář je zatím v testovacím režimu. Odesílání napojíme před spuštěním webu.');});
+open.addEventListener('click',show);close.addEventListener('click',()=>hide());modal.addEventListener('click',e=>{if(e.target===modal)hide()});window.addEventListener('popstate',()=>{if(formHistory){formHistory=false;hide(true)}});document.addEventListener('keydown',e=>{if(e.key==='Escape')hide()});
+
+const contactForm=document.getElementById('contactForm');
+const formStatus=document.getElementById('formStatus');
+contactForm.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const button=contactForm.querySelector('button[type="submit"]');
+  button.disabled=true;
+  formStatus.textContent='Odesílám poptávku…';
+  try{
+    const response=await fetch(contactForm.action,{method:'POST',body:new FormData(contactForm),headers:{Accept:'application/json'}});
+    const result=await response.json();
+    if(result.success){
+      formStatus.textContent='Poptávka byla odeslána. Ozvu se vám co nejdříve.';
+      contactForm.reset();
+    }else{
+      formStatus.textContent=result.message||'Poptávku se nepodařilo odeslat. Zkuste to prosím znovu.';
+    }
+  }catch(error){
+    formStatus.textContent='Poptávku se nepodařilo odeslat. Zkontrolujte připojení a zkuste to znovu.';
+  }finally{
+    button.disabled=false;
+  }
+});
 
 
 // Aktivní položka navigace podle právě zobrazeného oddílu.
