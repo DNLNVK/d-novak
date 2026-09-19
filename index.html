@@ -142,16 +142,20 @@
     <div class="section-kicker">POPTÁVKA</div>
     <h2>Co potřebujete vyřešit?</h2>
     <p class="modal-intro">Stačí popsat situaci vlastními slovy. Pokud máte fotografie nebo staré podklady, můžete je přiložit.</p>
-    <form>
-      <label>Co potřebujete?*<textarea required placeholder="Např. potřebuji zaměřit starší rodinný dům a připravit půdorysy…"></textarea></label>
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="access_key" value="3f8d114f-0307-4c4b-8a6a-3b3fb3fdbe25">
+      <input type="hidden" name="subject" value="Nová poptávka z d-novak.cz">
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+      <label>Co potřebujete?*<textarea name="message" required placeholder="Např. potřebuji zaměřit starší rodinný dům a připravit půdorysy…"></textarea></label>
       <div class="form-grid">
-        <label>E-mail*<input type="email" required placeholder="vas@email.cz"></label>
-        <label>Telefon<input type="tel" placeholder="+420 …"></label>
+        <label>E-mail*<input type="email" name="email" required placeholder="vas@email.cz"></label>
+        <label>Telefon<input type="tel" name="phone" placeholder="+420 …"></label>
       </div>
-      <label>Fotografie nebo podklady<input type="file" multiple accept="image/*,.pdf"></label>
+      <label>Fotografie nebo podklady<input type="file" name="attachment" multiple accept="image/*,.pdf"></label>
       <p class="note">Přílohy jsou dobrovolné. Pomohou mi lépe pochopit rozsah zakázky.</p>
-      <label class="check"><input type="checkbox" required><span>Souhlasím se zpracováním údajů za účelem vyřízení poptávky.</span></label>
+      <label class="check"><input type="checkbox" name="consent" value="Souhlasím" required><span>Souhlasím se zpracováním údajů za účelem vyřízení poptávky.</span></label>
       <button class="btn primary" type="submit">Odeslat poptávku <span>→</span></button>
+      <p id="formStatus" class="note" aria-live="polite"></p>
     </form>
   </div>
 </div>
