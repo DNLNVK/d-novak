@@ -3,8 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Daniel Novák — pasporty staveb, zaměření skutečného stavu a přehledná technická dokumentace.">
-<title>Daniel Novák — Pasporty staveb</title>
+<meta name="description" content="Daniel Novák — pasporty staveb na Jihlavsku, Telčsku a v okolí. Zaměření skutečného stavu a přehledná technická dokumentace.">
+<title>Daniel Novák — Pasporty staveb | Jihlavsko a Telčsko</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Daniel Novák — Pasporty staveb">
+<meta property="og:description" content="Pasportizace staveb na Jihlavsku, Telčsku a v okolí. Zaměření skutečného stavu a přehledná technická dokumentace.">
+<meta property="og:url" content="https://dnlnvk.github.io/d-novak/">
+<meta property="og:site_name" content="Daniel Novák — Pasporty staveb">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.svg">
 </head>
@@ -44,6 +49,7 @@
         <div><span class="feature-icon feature-svg" aria-hidden="true"><img src="icon-changed-building.svg" alt=""></span><div><b>Stavba neodpovídá výkresům</b><small>Objekt se v průběhu let změnil<br>a dokumentace už nesedí?</small></div></div>
         <div><span class="feature-icon feature-svg" aria-hidden="true"><img src="icon-docs-check.svg" alt=""></span><div><b>Potřebujete aktuální podklady</b><small>Chcete mít přehlednou dokumentaci<br>současného stavu?</small></div></div>
       </div>
+    </div>
     <a class="scroll-cue" href="#intro" aria-label="Posunout dolů"><span>⌄</span>POSUNOUT DOLŮ</a>
   </div>
 </section>
@@ -126,7 +132,7 @@
 
 <footer>
   <a class="footer-brand" href="#top"><span>D—N</span> DANIEL NOVÁK <small>PASPORTY</small></a>
-  <div><a href="#sluzby">Pasporty</a><a href="#ukazky">Ukázky</a><a href="#kontakt">Kontakt</a></div>
+  <div><a href="#sluzby">Co je pasport</a><a href="#ukazky">Ukázky</a><a href="#kontakt">Kontakt</a></div>
   <span>© 2026</span>
 </footer>
 
@@ -143,12 +149,16 @@
       <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
       <label>Co potřebujete?*<textarea name="message" required placeholder="Např. potřebuji zaměřit starší rodinný dům a připravit půdorysy…"></textarea></label>
       <div class="form-grid">
-        <label>E-mail*<input type="email" name="email" required placeholder="vas@email.cz"></label>
-        <label>Telefon<input type="tel" name="phone" placeholder="+420 …"></label>
+        <label>Jméno<input type="text" name="first_name" autocomplete="given-name" placeholder="Jan"></label>
+        <label>Příjmení<input type="text" name="last_name" autocomplete="family-name" placeholder="Novák"></label>
+      </div>
+      <div class="form-grid">
+        <label>E-mail*<input type="email" name="email" autocomplete="email" required placeholder="vas@email.cz"></label>
+        <label>Telefon<input type="tel" name="phone" autocomplete="tel" placeholder="+420 …"></label>
       </div>
       <label>Fotografie nebo podklady<input type="file" name="attachment" multiple accept="image/*,.pdf"></label>
       <p class="note">Přílohy jsou dobrovolné. Pomohou mi lépe pochopit rozsah zakázky.</p>
-      <label class="check"><input type="checkbox" name="consent" value="Souhlasím" required><span>Souhlasím se zpracováním údajů za účelem vyřízení poptávky.</span></label>
+      <label class="check"><input type="checkbox" name="consent" value="Souhlasím" required><span>Souhlasím se <a class="privacy-link" href="ochrana-osobnich-udaju.html" target="_blank" rel="noopener">zpracováním osobních údajů</a> za účelem vyřízení poptávky.</span></label>
       <button class="btn primary" type="submit">Odeslat poptávku <span>→</span></button>
     </form>
   </div>
