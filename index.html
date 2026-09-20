@@ -142,6 +142,7 @@
     <div class="section-kicker">POPTÁVKA</div>
     <h2>Co potřebujete vyřešit?</h2>
     <p class="modal-intro">Stačí popsat situaci vlastními slovy. Pokud máte fotografie nebo staré podklady, můžete je přiložit.</p>
+    <div id="formStatus" class="form-status" aria-live="polite" hidden></div>
     <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="access_key" value="3f8d114f-0307-4c4b-8a6a-3b3fb3fdbe25">
       <input type="hidden" name="subject" value="Nová poptávka z d-novak.cz">
@@ -155,7 +156,6 @@
       <p class="note">Přílohy jsou dobrovolné. Pomohou mi lépe pochopit rozsah zakázky.</p>
       <label class="check"><input type="checkbox" name="consent" value="Souhlasím" required><span>Souhlasím se zpracováním údajů za účelem vyřízení poptávky.</span></label>
       <button class="btn primary" type="submit">Odeslat poptávku <span>→</span></button>
-      <p id="formStatus" class="note" aria-live="polite"></p>
     </form>
   </div>
 </div>
