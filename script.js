@@ -115,3 +115,18 @@ document.addEventListener('keydown',e=>{
   if(e.key==='ArrowLeft')document.querySelector('.lightbox-prev').click();
   if(e.key==='ArrowRight')document.querySelector('.lightbox-next').click();
 });
+
+const navToggle=document.querySelector('.nav-toggle');
+const siteHeader=document.querySelector('.site-header');
+if(navToggle){
+  navToggle.addEventListener('click',()=>{
+    const open=siteHeader.classList.toggle('nav-open');
+    navToggle.setAttribute('aria-expanded',String(open));
+    navToggle.setAttribute('aria-label',open?'Zavřít menu':'Otevřít menu');
+  });
+  navLinks.forEach(link=>link.addEventListener('click',()=>{
+    siteHeader.classList.remove('nav-open');
+    navToggle.setAttribute('aria-expanded','false');
+    navToggle.setAttribute('aria-label','Otevřít menu');
+  }));
+}
