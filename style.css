@@ -87,3 +87,17 @@ footer{display:flex;align-items:center;justify-content:space-between;padding:25p
 
 .privacy-link{color:inherit;text-decoration:underline;text-underline-offset:3px}.privacy-link:hover{color:var(--ink)}
 .privacy-page{max-width:980px;margin:0 auto}.privacy-page h1{font:700 clamp(44px,5.2vw,74px)/1.02 "Space Grotesk",Arial,sans-serif;letter-spacing:-.055em;margin:24px 0 30px}.privacy-page h2{font:700 28px "Space Grotesk",Arial,sans-serif;margin:48px 0 12px}.privacy-page p{max-width:760px;color:var(--muted);font-size:16px;line-height:1.75}.privacy-note{font-size:12px!important;color:#947861!important;margin-top:55px}
+
+.nav-toggle{display:none}
+@media(max-width:650px){
+  .nav-toggle{display:flex;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;padding:9px;border:1px solid var(--line);background:transparent;cursor:pointer}
+  .nav-toggle span{display:block;width:100%;height:1px;background:var(--ink);transition:transform .2s,opacity .2s}
+  .site-header{position:sticky}
+  .site-header nav{position:absolute;top:70px;left:0;right:0;display:grid;gap:0;padding:8px 7vw 12px;background:rgba(245,243,238,.98);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);box-shadow:0 10px 25px rgba(23,25,28,.06);transform:translateY(-12px);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+  .site-header.nav-open nav{transform:translateY(0);opacity:1;pointer-events:auto}
+  .site-header nav a,.site-header nav a:nth-child(2),.site-header nav a:nth-child(3){display:block;padding:14px 0;border-bottom:1px solid var(--line);font-size:10px}
+  .site-header nav a:last-child{border-bottom:0}
+  .site-header.nav-open .nav-toggle span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .site-header.nav-open .nav-toggle span:nth-child(2){opacity:0}
+  .site-header.nav-open .nav-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+}
