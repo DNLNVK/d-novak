@@ -9,17 +9,22 @@ contactForm.addEventListener('submit',async e=>{
   e.preventDefault();
   const button=contactForm.querySelector('button[type="submit"]');
   button.disabled=true;
+  formStatus.hidden=false;
+  formStatus.classList.remove('success','error');
   formStatus.textContent='Odesílám poptávku…';
   try{
     const response=await fetch(contactForm.action,{method:'POST',body:new FormData(contactForm),headers:{Accept:'application/json'}});
     const result=await response.json();
     if(result.success){
+      formStatus.classList.add('success');
       formStatus.textContent='Poptávka byla odeslána. Ozvu se vám co nejdříve.';
       contactForm.reset();
     }else{
+      formStatus.classList.add('error');
       formStatus.textContent=result.message||'Poptávku se nepodařilo odeslat. Zkuste to prosím znovu.';
     }
   }catch(error){
+    formStatus.classList.add('error');
     formStatus.textContent='Poptávku se nepodařilo odeslat. Zkontrolujte připojení a zkuste to znovu.';
   }finally{
     button.disabled=false;
